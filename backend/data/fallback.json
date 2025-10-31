@@ -1,0 +1,16 @@
+{
+  "doctors": [
+    { "name": "Dr. Priya Sharma", "specialty": "General Physician", "bio": "Expert in preventive care and internal medicine. 10+ years experience.", "img": "https://randomuser.me/api/portraits/women/68.jpg" },
+    { "name": "Dr. Arjun Patel", "specialty": "Pediatrician", "bio": "Specializes in child health and vaccinations. Friendly and caring.", "img": "https://randomuser.me/api/portraits/men/43.jpg" }
+  ],
+  "services": [
+    { "name": "General Consultation", "description": "Comprehensive health assessments with our expert physicians." },
+    { "name": "Cardiology", "description": "Advanced cardiac care." }
+  ],
+  "appointments": [
+    { "name": "Test User", "email": "test@example.com", "phone": "1234567890", "service": "General Consultation", "date": "2025-11-01" }
+  ],
+  "feedbacks": [
+    { "name": "Student A", "message": "Great service." }
+  ]
+}

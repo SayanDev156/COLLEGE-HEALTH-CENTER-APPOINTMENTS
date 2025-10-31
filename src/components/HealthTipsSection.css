@@ -1,0 +1,66 @@
+.health-tips-section {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  padding: 3rem 1rem;
+  border-radius: 30px;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(67,233,123,0.15);
+  animation: fadeInUp 1.2s ease;
+}
+
+.health-tips-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2575fc;
+  margin-bottom: 2rem;
+}
+
+.tips-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tip-card {
+  background: #e6fff9;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeIn 1.2s ease;
+}
+.tip-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(67,233,123,0.12);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .tips-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .tip-card {
+    width: 95vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .health-tips-section {
+    padding: 2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .health-tips-section h2 {
+    font-size: 1.3rem;
+  }
+}

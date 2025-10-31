@@ -1,0 +1,79 @@
+.doctors-section {
+  background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+  padding: 3rem 1rem;
+  border-radius: 30px;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(247,151,30,0.15);
+  animation: fadeInUp 1.2s ease;
+}
+
+.doctors-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6a11cb;
+  margin-bottom: 2rem;
+}
+
+.doctors-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.doctor-card {
+  background: #fffbe6;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeIn 1.2s ease;
+}
+.doctor-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(106,17,203,0.12);
+}
+.doctor-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #ffd200;
+}
+.specialty {
+  color: #f7971e;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .doctors-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .doctor-card {
+    width: 95vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .doctors-section {
+    padding: 2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .doctors-section h2 {
+    font-size: 1.3rem;
+  }
+}

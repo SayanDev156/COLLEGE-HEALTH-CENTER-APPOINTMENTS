@@ -1,0 +1,102 @@
+.booking-form input,
+.booking-form select {
+  width: 90%;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #b2d8f7;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+.booking-form input:focus,
+.booking-form select:focus {
+  border: 2px solid #0093e9;
+  outline: none;
+}
+.date-picker-wrapper {
+  position: relative;
+  width: 90%;
+  margin-bottom: 0.5rem;
+}
+.date-picker-input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+.calendar-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #0093e9;
+  pointer-events: none;
+}
+.appointment-booking-section {
+  background: linear-gradient(120deg, #d6eaff 0%, #f8ffd2 100%);
+  padding: 3rem 1rem;
+  border-radius: 30px;
+  margin: 2rem auto;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0,147,233,0.10);
+  text-align: center;
+  animation: fadeInUp 1.2s ease;
+}
+.booking-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0093e9;
+  margin-bottom: 2rem;
+}
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+.booking-form input,
+.booking-form select {
+  width: 90%;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #b2d8f7;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+.booking-form input:focus,
+.booking-form select:focus {
+  border: 2px solid #0093e9;
+  outline: none;
+}
+.booking-btn {
+  background: linear-gradient(90deg, #0093e9 0%, #80d0c7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,147,233,0.10);
+  transition: background 0.2s;
+}
+.booking-btn:hover {
+  background: linear-gradient(90deg, #80d0c7 0%, #0093e9 100%);
+}
+.booking-success {
+  color: #009e60;
+  font-weight: 600;
+  margin-top: 1rem;
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

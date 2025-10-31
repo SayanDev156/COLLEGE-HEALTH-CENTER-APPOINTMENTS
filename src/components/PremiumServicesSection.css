@@ -1,0 +1,78 @@
+.premium-services-section {
+  background: linear-gradient(120deg, #f8ffd2 0%, #d6eaff 100%);
+  padding: 3rem 1rem;
+  border-radius: 30px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 32px rgba(106,17,203,0.08);
+  text-align: center;
+  animation: fadeInUp 1.2s ease;
+}
+.premium-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #6a11cb;
+  margin-bottom: 0.5rem;
+}
+.premium-sub {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+.premium-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.premium-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  width: 260px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeIn 1.2s ease;
+}
+.premium-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(106,17,203,0.12);
+}
+.premium-card-title {
+  color: #0093e9;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.premium-card-desc {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.premium-card-btn {
+  background: #fff;
+  color: #0093e9;
+  border: 2px solid #0093e9;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.premium-card-btn:hover {
+  background: #0093e9;
+  color: #fff;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

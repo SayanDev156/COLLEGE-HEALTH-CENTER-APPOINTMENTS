@@ -1,0 +1,77 @@
+.feature-section {
+  background: linear-gradient(135deg, #6a11cb 0%, #f7971e 100%);
+  padding: 3rem 1rem;
+  border-radius: 30px;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(106,17,203,0.15);
+  animation: fadeInUp 1.2s ease;
+}
+
+.feature-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px #2575fc44;
+}
+
+.feature-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: featureFadeIn 1.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(106,17,203,0.12);
+  background: linear-gradient(135deg, #fcb69f 0%, #6a82fb 100%);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  animation: iconBounce 1.5s infinite alternate;
+}
+
+@keyframes featureFadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes iconBounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+@media (max-width: 600px) {
+  .feature-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .feature-card {
+    width: 95vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .feature-section {
+    padding: 2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .feature-section h2 {
+    font-size: 1.3rem;
+  }
+}
