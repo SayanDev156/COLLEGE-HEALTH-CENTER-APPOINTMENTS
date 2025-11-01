@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backend Test</title>
+</head>
+<body>
+    <h1>Backend Connection Test</h1>
+    <button onclick="testBackend()">Test Backend</button>
+    <div id="result"></div>
+
+    <script>
+        async function testBackend() {
+            const result = document.getElementById('result');
+            result.innerHTML = 'Testing...';
+            
+            try {
+                // Test root endpoint
+                const res1 = await fetch('https://college-health-center-appointments.onrender.com/');
+                const text1 = await res1.text();
+                result.innerHTML += `<p>✓ Root: ${text1}</p>`;
+                
+                // Test API endpoint
+                const res2 = await fetch('https://college-health-center-appointments.onrender.com/api/doctors');
+                const data2 = await res2.json();
+                result.innerHTML += `<p>✓ API Doctors: ${data2.length} doctors found</p>`;
+                
+                result.innerHTML += '<p style="color: green;">✓ Backend is working!</p>';
+            } catch (err) {
+                result.innerHTML += `<p style="color: red;">✗ Error: ${err.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import './NotificationSection.css';
 
 const initialNotifications = [
-  { id: 1, message: 'Your appointment with Dr. Smith is confirmed for tomorrow.' },
-  { id: 2, message: 'Health Center will be closed on Sunday.' },
-  { id: 3, message: 'New health tips added! Check the Health Tips section.' }
+  { id: 1, message: 'Health Center will be closed on Sunday.' },
+  { id: 2, message: 'New health tips added! Check the Health Tips section.' }
 ];
 
 const NotificationSection = () => {
