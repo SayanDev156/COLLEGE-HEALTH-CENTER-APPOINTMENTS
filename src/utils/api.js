@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://college-health-center-appointments.onrender.com/api';
 const API_ROOT = API_BASE.replace(/\/api\/?$/, '');
 
 function authHeader() {
