@@ -8,8 +8,17 @@ const BackendStatus = () => {
     let mounted = true;
     async function check() {
       try {
-        const base = (import.meta.env.VITE_API_BASE || 'http://localhost:5000/api').replace(/\/api$/, '');
-        const res = await fetch(`${base}/`, { cache: 'no-store' });
+        const base = (import.meta.env.VITE_API_BASE || 'https://college-health-center-appointments.onrender.com/api').replace(/\/api$/, '');
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 120000);
+        
+        const res = await fetch(`${base}/`, { 
+          cache: 'no-store',
+          signal: controller.signal,
+          mode: 'cors'
+        });
+        clearTimeout(timeoutId);
+        
         if (!mounted) return;
         if (res.ok) {
           setStatus('ok');
@@ -18,13 +27,14 @@ const BackendStatus = () => {
         }
       } catch (err) {
         if (!mounted) return;
+        console.error('Backend check failed:', err.message);
         setStatus('down');
       } finally {
-        setLastChecked(new Date());
+        if (mounted) setLastChecked(new Date());
       }
     }
     check();
-    const id = setInterval(check, 15000);
+    const id = setInterval(check, 30000);
     return () => { mounted = false; clearInterval(id); };
   }, []);
 
