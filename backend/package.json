@@ -10,8 +10,8 @@
     "seed": "node scripts/seed.js",
     "migrate": "node scripts/migrate.js",
     "create-admin": "node scripts/createAdmin.js",
-  "test": "node --test ./test/index.mjs",
-  "smoke": "node scripts/smokeTests.mjs"
+    "test": "node --test ./test/index.mjs",
+    "smoke": "node scripts/smokeTests.mjs"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
